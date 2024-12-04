@@ -3,7 +3,7 @@ import webbrowser
 from PyQt5 import QtCore, QtGui, QtWidgets
 from net.fallDownDetectYolo import FallDownDetectYolo
 
-VerSion = '1.0.1'
+VerSion = '1.8.0'
 
 #弹出窗口
 class RadioDialog(QtWidgets.QDialog):
@@ -347,6 +347,7 @@ class Ui_MainWindow(object):
         pixmap = QtGui.QPixmap("cache_im.jpg")
         scaredPixmap = pixmap.scaled(QtCore.QSize(720,960),aspectRatioMode=QtCore.Qt.KeepAspectRatio)
         scaredPixmap_item = QtWidgets.QGraphicsPixmapItem(scaredPixmap)
+        self.mainscene.clear()
         self.mainscene.addItem(scaredPixmap_item)
         os.remove("cache_im.jpg")
 
@@ -355,6 +356,7 @@ class Ui_MainWindow(object):
         pixmap = QtGui.QPixmap("cache_im.jpg")
         scaredPixmap = pixmap.scaled(QtCore.QSize(300,400),aspectRatioMode=QtCore.Qt.KeepAspectRatio)
         scaredPixmap_item = QtWidgets.QGraphicsPixmapItem(scaredPixmap)
+        self.secondscene.clear()
         self.secondscene.addItem(scaredPixmap_item)
         os.remove("cache_im.jpg")
     
@@ -362,12 +364,14 @@ class Ui_MainWindow(object):
         pixmap = QtGui.QPixmap(image_path)
         scaredPixmap = pixmap.scaled(QtCore.QSize(720,960),aspectRatioMode=QtCore.Qt.KeepAspectRatio)
         scaredPixmap_item = QtWidgets.QGraphicsPixmapItem(scaredPixmap)
+        self.mainscene.clear()
         self.mainscene.addItem(scaredPixmap_item)
 
     def show_image_second_(self, image_path):
         pixmap = QtGui.QPixmap(image_path)
         scaredPixmap = pixmap.scaled(QtCore.QSize(300,400),aspectRatioMode=QtCore.Qt.KeepAspectRatio)
         scaredPixmap_item = QtWidgets.QGraphicsPixmapItem(scaredPixmap)
+        self.secondscene.clear()
         self.secondscene.addItem(scaredPixmap_item)
 
     def retranslateUi(self, MainWindow):

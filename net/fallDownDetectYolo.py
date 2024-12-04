@@ -263,9 +263,9 @@ class FallDownDetectYolo:
                 print(f"检测结果已保存至: {save_path}")
 
             # 显示检测结果图像
-            #cv2.imshow('PyTorch Detections', img_draw)
-            #cv2.waitKey(0)
-            #cv2.destroyAllWindows()
+            cv2.imshow('PyTorch Detections', img_draw)
+            cv2.waitKey(0)
+            cv2.destroyAllWindows()
 
         # onnx 模型推理
         elif self.pt_or_onnx == 'onnx':
@@ -292,9 +292,9 @@ class FallDownDetectYolo:
                 print(f"检测结果已保存至: {save_path}")
 
             # 显示结果
-            #cv2.imshow('ONNX Detections', detected_img)
-            #cv2.waitKey(0)
-            #cv2.destroyAllWindows()
+            cv2.imshow('ONNX Detections', detected_img)
+            cv2.waitKey(0)
+            cv2.destroyAllWindows()
 
     # 推理函数（基于视频输入）
     def video_inference(self, save=False, save_path='output_video.avi', fps=30):
