@@ -26,3 +26,8 @@ python FallDownDetect.py
 ## 命令行指令
 
 本项目支持多种命令行指令，用于执行原生项目的指令。这些指令的详细说明请参见 orders.txt 文件。
+同时请注意检查`Ui_FallDownDetect_inferemote`两份代码中脚本路径，请根据实际本地路径进行修改。
+
+## Windows/macOS
+
+由于windows与mac系统中执行外部脚本的代码有所区别，因此请根据实际运行系统，在`FallDownDetect.py`中导入`Ui_FallDownDetect_inferemote_for_Mac`或者`Ui_FallDownDetect_Inferemote`
